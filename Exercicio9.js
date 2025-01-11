@@ -23,3 +23,15 @@ const booksByCategory = [
         {title: "1984", author: "George Orwell", },
         {title: "O Fim da Infância", author: "Arthur C. Clarke", } ],
      }, ];
+
+function authors(BBC){
+    let res = [];
+    for(let i = 0; i < BBC.length; i++){
+        for(let j = 0; j < (BBC[i].books).length; j++){
+            res.push((BBC[i].books[j]).author);
+        }
+    }
+    return res;
+}
+
+console.log(authors(booksByCategory));
